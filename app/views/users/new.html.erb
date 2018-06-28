@@ -20,8 +20,8 @@
 <%# end %>
 
 <%= form_for @user do |f| %>
-  Username <%= f.text_field :username, value: "user_name" %><br>
-  Email <%= f.text_field :email, placeholder: "user_name@gmail.com" %><br>
-  Password <%= f.password_field :password %><br>
+  <p>Username <%= f.text_field :username, value: "user_name" %></p>
+  <p>Email <%= f.text_field :email, placeholder: "user_name@gmail.com" %></p>
+  <p>Password <%= f.password_field :password %></p>
   <%= f.submit "Submit" %>
 <% end %>
