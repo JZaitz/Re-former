@@ -1,0 +1,12 @@
+<h1>Browse All Active Events</h1>
+
+<ul id="articles">
+  <% @events.each do |event| %>
+    <li>
+      <%= link_to event.title, event_path(event) %>
+    </li>
+  <% end %>
+</ul>
+<br>
+
+<%= link_to "<< Back to Users List", users_path %>

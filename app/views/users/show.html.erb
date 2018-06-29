@@ -1,6 +1,14 @@
 <h1><%= @user.username %>'s Page</h1>
     <p>User created at: <%= @user.created_at %></p>
+ 
+<h3>Your Events: (<%= @user.events.size %>)</h3>
+
+<%= render partial: 'users/event', collection: @user.events %><br>
+<hr>
+<%= render partial: 'events/form' %>
+
     
 <%= link_to '<< Edit Your Information', edit_user_path %>  |  
 <%= link_to "<< Back to All Users", users_path %>  |  
 <%= link_to "<< Delete Account", user_path(@user), method: :delete %>
+

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-   resources :users #only: [:new, :create, :edit, :show, :update, :index]
-    
+   resources :users do #only: [:new, :create, :edit, :show, :update, :index]
+    resources :events
+   end
    
     
     

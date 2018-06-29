@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   
   def index
     @users = User.all 
+  
   end
   
   def new
@@ -10,7 +11,8 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    
+    @event = Event.new
+    @event.user_id = @user.id
   end 
 
   def create
