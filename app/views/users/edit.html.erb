@@ -9,3 +9,4 @@
 <% end %>
 
 <%= @user.errors.full_messages.first if @user.errors.any? %>
+<%= link_to "<< Back to All Users", users_path %>
