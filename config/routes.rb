@@ -2,6 +2,9 @@ Rails.application.routes.draw do
    resources :users do #only: [:new, :create, :edit, :show, :update, :index]
     resources :events
    end
+   resources :events
+   
+   
    
     
     

@@ -18,6 +18,7 @@ class EventsController < ApplicationController
     @user = User.find(params[:id])
     @event = Event.new
     @event.user_id = @user.id
+    @event = Event.find(params[:id])
   end 
 
   
@@ -40,7 +41,7 @@ class EventsController < ApplicationController
   def destroy
         @event = Event.find(params[:id]).destroy
         flash.notice = "Event has been deleted."
-        redirect_to users_path
+        redirect_to events_path
   end
 
     
@@ -49,4 +50,10 @@ class EventsController < ApplicationController
     def event_params
         params.require(:event).permit(:title, :description, :date)
     end
+    
+    def user_params
+        params.require(:user).permit(:username, :email, :password)
+    end
+    
+    
 end

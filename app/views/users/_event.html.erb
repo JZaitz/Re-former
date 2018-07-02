@@ -6,5 +6,8 @@
           <p class="comment">Date/Time: <%= event.date %> </p>
           <p><%= event.date %></p>
           <p>Created <%= distance_of_time_in_words(Time.now, event.created_at) %> ago</p>
+          <%= link_to "<< Delete Event", event_path(event), method: :delete %>
+
     </div>
+    
     
