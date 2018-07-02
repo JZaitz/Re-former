@@ -3,7 +3,7 @@
 <ul id="articles">
   <% @events.each do |event| %>
     <li>
-      <%= link_to event.title, event_path(event) %> --
+      <%= link_to event.title, user_path(event.user_id) %> --
       <%= event.description %>-- Created <%= distance_of_time_in_words(Time.now, event.created_at) %> ago
     </li>
   <% end %>
